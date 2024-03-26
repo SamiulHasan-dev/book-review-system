@@ -2,7 +2,7 @@
 const getBooksInfo = () => {
     const storedBookInfo = localStorage.getItem('book-info');
     if (storedBookInfo) {
-        return JSON.parse(storedBookInfo)
+        return JSON.parse(storedBookInfo);
     }
     return [];
 }

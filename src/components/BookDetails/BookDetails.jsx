@@ -1,7 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { saveBooksInfo } from "../../utility/localstorage";
+import {  saveBooksInfo } from "../../utility/localstorage";
 import { saveBooksInfoWish } from "../../utility/localstorageWish";
 import { useState } from "react";
 
@@ -27,7 +27,10 @@ const BookDetails = () => {
     }
 
     const handleWishList = () => {
-        saveBooksInfoWish(bookIdInt)
+        
+       
+        saveBooksInfoWish(bookIdInt);
+
         const newWish = wish + 1;
         setWish(newWish);
         read < 1 && wish < 1 ?toast.success('Book Added To wish List')  : toast.error('Book already wish') ;
