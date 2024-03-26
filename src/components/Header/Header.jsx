@@ -11,7 +11,7 @@ const Header = () => {
 
     return (
         <div>
-            <div className="navbar bg-base-100 ">
+            <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,7 +23,7 @@ const Header = () => {
                             </div>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-2xl font-bold">Book Hub</a>
+                    <a className="btn btn-ghost text-2xl font-bold text-green-600">Book Hub</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -33,7 +33,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end md:gap-4 ">
-                    <a className="btn bg-success text-white">Sign In</a>
+                    <a className="btn bg-green-600 text-white">Sign In</a>
                     <a className="btn text-white bg-accent">Sign Up</a>
                 </div>
 

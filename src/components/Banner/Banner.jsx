@@ -9,7 +9,7 @@ const Banner = () => {
                     <img src="https://i.ibb.co/k4Q7HHM/pngwing-1-removebg-preview.png" className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
                         <h1 className="text-5xl font-bold">Books to freshen up <br /> your bookshelf</h1>
-                        <Link to="/list"><button className="btn btn-success text-white font-bold mt-5">View The List</button></Link>
+                        <Link to="/list"><button className="btn bg-green-600 text-white font-bold mt-5">View The List</button></Link>
                     </div>
                 </div>
             </div>
