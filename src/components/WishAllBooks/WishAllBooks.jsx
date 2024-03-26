@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { getBooksInfo } from "../../utility/localstorage";
+import { getBooksInfoWish } from "../../utility/localstorageWish";
 
-
-const ReadAllBooks = () => {
-     const [readBook, setReadBook] = useState([]);
+const WishAllBooks = () => {
+    const [readBook, setReadBook] = useState([]);
 
     const books = useLoaderData();
 
     useEffect(() => {
-        const storedBooks = getBooksInfo();
+        const storedBooks = getBooksInfoWish();
         if (books.length > 0) {
             const booksStore = [];
             for(const id of storedBooks){
@@ -24,9 +23,9 @@ const ReadAllBooks = () => {
     }, [books])
     return (
         <div>
-            <h2>Read korsi {readBook.length}</h2>
+            <h2>Wish i could fly: {readBook.length}</h2>
         </div>
     );
 };
 
-export default ReadAllBooks;
+export default WishAllBooks;

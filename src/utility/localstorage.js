@@ -1,3 +1,4 @@
+
 const getBooksInfo = () => {
     const storedBookInfo = localStorage.getItem('book-info');
     if (storedBookInfo) {
@@ -13,6 +14,11 @@ const saveBooksInfo = id => {
         storedBook.push(id);
         localStorage.setItem('book-info', JSON.stringify(storedBook));
     }
+   
 }
+
+
+
+
 
 export { saveBooksInfo, getBooksInfo }

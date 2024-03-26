@@ -1,6 +1,5 @@
-import { Link, Outlet, useLoaderData } from "react-router-dom";
-import { getBooksInfo } from "../../utility/localstorage";
-import { useEffect, useState } from "react";
+import { Link, Outlet} from "react-router-dom";
+import {  useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 
@@ -8,24 +7,7 @@ const ListBooks = () => {
 
     const [tabIndex, setTabIndex] = useState(0);
 
-    // const [readBook, setReadBook] = useState([]);
 
-    // const books = useLoaderData();
-
-    // useEffect(() => {
-    //     const storedBooks = getBooksInfo();
-    //     if (books.length > 0) {
-    //         const booksStore = [];
-    //         for(const id of storedBooks){
-    //             const book = books.find(book=> book.bookId === id);
-    //             if(book){
-    //                 booksStore.push(book);
-    //             }
-    //         }
-    //         setReadBook(booksStore)
-    //         console.log(books, storedBooks, booksStore);
-    //     }
-    // }, [books])
 
     return (
         <div>
