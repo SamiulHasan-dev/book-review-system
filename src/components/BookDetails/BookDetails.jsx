@@ -1,8 +1,8 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {  saveBooksInfo } from "../../utility/localstorage";
-import { saveBooksInfoWish } from "../../utility/localstorageWish";
+import { saveBooksInfo } from "../../utility/localstorage";
+import {  saveBooksInfoWish } from "../../utility/localstorageWish";
 import { useState } from "react";
 
 
@@ -16,24 +16,33 @@ const BookDetails = () => {
     const { bookId } = useParams();
     const bookIdInt = parseInt(bookId);
     const book = books.find(book => book.bookId === bookIdInt);
-    
+
 
     const handleReadBook = () => {
+        
         saveBooksInfo(bookIdInt);
-        // saveBooksInfoWish(bookIdInt);
         const newRead = read + 1;
         setRead(newRead);
-        read < 1 ? toast.success('Book Added To Read List')  : toast.error('Book already read') ;
+        read < 1 ? toast.success('Book Added To Read List') : toast.error('Book already read');
     }
 
     const handleWishList = () => {
-        
-       
-        saveBooksInfoWish(bookIdInt);
+
 
         const newWish = wish + 1;
         setWish(newWish);
-        read < 1 && wish < 1 ?toast.success('Book Added To wish List')  : toast.error('Book already wish') ;
+        if (read < 1 && wish < 1) {
+            toast.success('Book Added To wish List')
+            saveBooksInfoWish(bookIdInt);
+        }
+        else {
+            toast.error('Book already wish')
+        }
+
+        // saveBooksInfoWish(bookIdInt);
+        // const newWish = wish + 1;
+        // setWish(newWish);
+        // read < 1 && wish < 1 ? toast.success('Book Added To wish List')  : toast.error('Book already wish') ;
     }
 
 
