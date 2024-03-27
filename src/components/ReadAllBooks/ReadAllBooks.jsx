@@ -60,9 +60,11 @@ const ReadAllBooks = () => {
                 </details>
             </div>
 
+            <div>
             {
                 displayBook.map(book=> <ReadAllBook key={book.bookId} book={book}></ReadAllBook>)
             }
+            </div>
 
         </div>
     );
