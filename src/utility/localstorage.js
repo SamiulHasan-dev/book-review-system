@@ -17,8 +17,4 @@ const saveBooksInfo = id => {
    
 }
 
-
-
-
-
 export { saveBooksInfo, getBooksInfo }

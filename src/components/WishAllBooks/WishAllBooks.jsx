@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getBooksInfoWish } from "../../utility/localstorageWish";
+import WishAllBook from "../WishAllBook/WishAllBook";
 
 const WishAllBooks = () => {
-    const [readBook, setReadBook] = useState([]);
+    const [readBooks, setReadBooks] = useState([]);
 
     const books = useLoaderData();
 
@@ -17,13 +18,15 @@ const WishAllBooks = () => {
                     booksStore.push(book);
                 }
             }
-            setReadBook(booksStore)
+            setReadBooks(booksStore)
             console.log(books, storedBooks, booksStore);
         }
     }, [books])
     return (
         <div>
-            <h2>Wish i could fly: {readBook.length}</h2>
+            {
+                readBooks.map(book => <WishAllBook key={book.bookId} book={book}></WishAllBook> )
+            }
         </div>
     );
 };

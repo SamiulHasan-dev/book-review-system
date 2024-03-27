@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getBooksInfo } from "../../utility/localstorage";
+import ReadAllBook from "../ReadAllBook/ReadAllBook";
 
 
 const ReadAllBooks = () => {
-     const [readBook, setReadBook] = useState([]);
+     const [readBooks, setReadBooks] = useState([]);
 
     const books = useLoaderData();
 
@@ -18,13 +19,15 @@ const ReadAllBooks = () => {
                     booksStore.push(book);
                 }
             }
-            setReadBook(booksStore)
+            setReadBooks(booksStore)
             console.log(books, storedBooks, booksStore);
         }
     }, [books])
     return (
         <div>
-            <h2>Read korsi {readBook.length}</h2>
+            {
+                readBooks.map(book => <ReadAllBook key={book.bookId} book={book}></ReadAllBook> )
+            }
         </div>
     );
 };
