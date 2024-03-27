@@ -13,8 +13,8 @@ const ReadAllBook = ({book}) => {
             <div className="flex flex-col md:flex-row  items-center gap-3 my-4">
                 <img className="h-[170px] w-[170px] p-5 bg-slate-100 rounded-lg" src={image} alt="" />
                 <div className="space-y-1">
-                    <h2 className="text-2xl font-bold">{bookName}</h2>
-                    <h3 className="text-base font-semibold">By: {author}</h3>
+                    <h2 className="text-2xl font-bold text-center lg:text-left">{bookName}</h2>
+                    <h3 className="text-base font-semibold text-center lg:text-left">By: {author}</h3>
                     <div className="flex items-center gap-5 flex-col md:flex-row">
                         <p className="font-bold text-base">Tags:</p>
                         <p className="text-green-700 bg-green-50 font-semibold px-2 py-1 rounded-xl">{tags[0]}</p>
@@ -31,6 +31,7 @@ const ReadAllBook = ({book}) => {
                         <p className="text-orange-800 bg-orange-100 font-semibold  rounded-xl text-base px-4 py-1">Rating: {rating}</p>
                         <Link to={`/book/${bookId}`}><button className="btn bg-green-500 text-white">View Details</button></Link>
                     </div>
+                    <hr />
                 </div>
             </div>
         </div>

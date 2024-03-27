@@ -8,7 +8,7 @@ const Header = () => {
         <NavLink to="/list" className={({ isActive }) => isActive ? 'text-green-600 border-green-600 font-bold border p-2 rounded' : 'font-medium'}>Listed Books</NavLink>
         <NavLink to="/read" className={({ isActive }) => isActive ? 'text-green-600 border-green-600 font-bold border p-2 rounded' : 'font-medium'}>Pages to Read</NavLink>
         <NavLink to="/users" className={({ isActive }) => isActive ? 'text-green-600 border-green-600 font-bold border p-2 rounded' : 'font-medium'}>Users</NavLink>
-        <NavLink to="/aboutUs" className={({ isActive }) => isActive ? 'text-green-600 border-green-600 font-bold border p-2 rounded' : 'font-medium'}>AboutUS</NavLink>
+        <NavLink to="/aboutUs" className={({ isActive }) => isActive ? 'text-green-600 border-green-600 font-bold border p-2 rounded' : 'font-medium'}>About US</NavLink>
     </>
 
     return (

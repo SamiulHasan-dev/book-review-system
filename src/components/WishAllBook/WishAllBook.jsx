@@ -12,9 +12,9 @@ const WishAllBook = ({book}) => {
             <div className="flex items-center gap-3 my-4 flex-col md:flex-row">
                 <img className="h-[150px] w-[150px] p-5 bg-slate-100 rounded-lg" src={image} alt="" />
                 <div className="space-y-1">
-                    <h2 className="text-2xl font-bold">{bookName}</h2>
-                    <h3 className="text-base font-semibold">By: {author}</h3>
-                    <div className="flex items-center gap-5">
+                    <h2 className="text-2xl font-bold text-center lg:text-left">{bookName}</h2>
+                    <h3 className="text-base font-semibold text-center lg:text-left">By: {author}</h3>
+                    <div className="flex items-center gap-5 flex-col md:flex-row">
                         <p className="font-bold">Tags:</p>
                         <p className="text-green-700 px-2 py-1 bg-green-50 font-semibold p-1 rounded-xl">{tags[0]}</p>
                         <p className="text-green-700 px-2 py-1 bg-green-50 font-semibold p-1 rounded-xl">{tags[1]}</p>
@@ -30,6 +30,7 @@ const WishAllBook = ({book}) => {
                         <p className="text-orange-800 bg-orange-100 font-semibold rounded-xl px-4 py-1">Rating: {rating}</p>
                         <Link to={`/book/${bookId}`}><button className="btn bg-green-500 text-white">View Details</button></Link>
                     </div>
+                    <hr />
                 </div>
             </div>
         </div>
