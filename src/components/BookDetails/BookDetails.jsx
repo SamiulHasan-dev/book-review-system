@@ -19,11 +19,11 @@ const BookDetails = () => {
 
 
     const handleReadBook = () => {
-        
+
         saveBooksInfo(bookIdInt);
         const newRead = read + 1;
         setRead(newRead);
-        read < 1 ? toast.success('Book Added To Read List') : toast.error('Book already read');
+        // read < 1 ? toast.success('Book Added To Read List') : toast.error('Book already read');
     }
 
     const handleWishList = () => {
@@ -31,12 +31,12 @@ const BookDetails = () => {
 
         const newWish = wish + 1;
         setWish(newWish);
-        if (read < 1 && wish < 1) {
+        if (read < 1  && wish < 1) {
             toast.success('Book Added To wish List')
             saveBooksInfoWish(bookIdInt);
         }
         else {
-            toast.error('Book already wish')
+            toast.error('Book already Added')
         }
 
         // saveBooksInfoWish(bookIdInt);
