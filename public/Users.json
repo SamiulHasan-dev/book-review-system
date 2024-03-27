@@ -1,0 +1,82 @@
+[
+    {
+        "userId": 1,
+        "username": "bookworm23",
+        "shortName": "AJ",
+        "name": "Alice Johnson",
+        "email": "bookworm23@example.com",
+        "isActive": true
+    },
+    {
+        "userId": 2,
+        "username": "readingiscool",
+        "shortName": "BL",
+        "name": "Benjamin Lee",
+        "email": "readingiscool@example.com",
+        "isActive": true
+    },
+    {
+        "userId": 3,
+        "username": "novelnerd",
+        "shortName": "CC",
+        "name": "Catherine Chen",
+        "email": "novelnerd@example.com",
+        "isActive": true
+    },
+    {
+        "userId": 4,
+        "username": "pageturner",
+        "shortName": "DS",
+        "name": "Daniel Smith",
+        "email": "pageturner@example.com",
+        "isActive": true
+    },
+    {
+        "userId": 5,
+        "username": "booklover567",
+        "shortName": "ED",
+        "name": "Emily Davis",
+        "email": "booklover567@example.com",
+        "isActive": true
+    },
+    {
+        "userId": 6,
+        "username": "fictionfanatic",
+        "shortName": "FB",
+        "name": "Fiona Brown",
+        "email": "fictionfanatic@example.com",
+        "isActive": true
+    },
+    {
+        "userId": 7,
+        "username": "literarylion",
+        "shortName": "GT",
+        "name": "Gregory Taylor",
+        "email": "literarylion@example.com",
+        "isActive": true
+    },
+    {
+        "userId": 8,
+        "username": "prosepro",
+        "shortName": "HR",
+        "name": "Hannah Roberts",
+        "email": "prosepro@example.com",
+        "isActive": true
+    },
+    {
+        "userId": 9,
+        "username": "bookishbabe",
+        "shortName": "IM",
+        "name": "Isabella Martinez",
+        "email": "bookishbabe@example.com",
+        "isActive": true
+    },
+    {
+        "userId": 10,
+        "username": "readingrocks",
+        "shortName": "JW",
+        "name": "James Wilson",
+        "email": "readingrocks@example.com",
+        "isActive": true
+    }
+]

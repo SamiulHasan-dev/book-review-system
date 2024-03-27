@@ -7,6 +7,7 @@ const Header = () => {
         <NavLink to="/" className={({ isActive }) => isActive ? 'text-green-600 border-green-600 font-bold border p-2 rounded' : 'font-blod'}>Home</NavLink>
         <NavLink to="/list" className={({ isActive }) => isActive ? 'text-green-600 border-green-600 font-bold border p-2 rounded' : 'font-blod'}>Listed Books</NavLink>
         <NavLink to="/read" className={({ isActive }) => isActive ? 'text-green-600 border-green-600 font-bold border p-2 rounded' : 'font-blod'}>Pages to Read</NavLink>
+        <NavLink to="/users" className={({ isActive }) => isActive ? 'text-green-600 border-green-600 font-bold border p-2 rounded' : 'font-blod'}>Users</NavLink>
     </>
 
     return (
