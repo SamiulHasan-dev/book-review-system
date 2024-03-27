@@ -8,7 +8,7 @@ const WishAllBook = ({book}) => {
     const {bookId, image, bookName, author, tags, yearOfPublishing, publisher, totalPages, category, rating} = book;
     return (
         <div>
-            <div>
+            <div className="gap-2 border px-4 rounded-lg shadow-sm">
             <div className="flex items-center gap-3 my-4 flex-col md:flex-row">
                 <img className="h-[150px] w-[150px] p-5 bg-slate-100 rounded-lg" src={image} alt="" />
                 <div className="space-y-1">

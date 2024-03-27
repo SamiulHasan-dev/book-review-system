@@ -23,7 +23,7 @@ const WishAllBooks = () => {
         }
     }, [books])
     return (
-        <div>
+        <div className="flex flex-col gap-3 mt-5">
             {
                 readBooks.map(book => <WishAllBook key={book.bookId} book={book}></WishAllBook> )
             }

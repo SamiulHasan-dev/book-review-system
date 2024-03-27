@@ -60,7 +60,7 @@ const ReadAllBooks = () => {
                 </details>
             </div>
 
-            <div>
+            <div className="flex flex-col gap-3 mt-3">
             {
                 displayBook.map(book=> <ReadAllBook key={book.bookId} book={book}></ReadAllBook>)
             }
