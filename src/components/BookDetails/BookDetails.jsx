@@ -43,9 +43,9 @@ const BookDetails = () => {
 
     return (
         <div>
-            <div className="hero mt-8">
+            <div className="hero mt-8 border rounded-lg shadow-sm">
                 <div className="hero-content flex-col lg:flex-row gap-10">
-                    <img src={book.image} className="rounded-lg shadow-xl bg-base-300 h-[70vh] w-1/2" />
+                    <img src={book.image} className="rounded-lg h-[70vh] w-1/2 p-4 " />
                     <div className="space-y-2 py-2">
                         <h1 className="text-3xl font-bold">{book.bookName}</h1>
                         <h3 className="text-xl font-semibold">By: {book.author}</h3>
