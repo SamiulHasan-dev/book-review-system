@@ -7,12 +7,12 @@ const Error = () => {
     return (
         <div  className="flex justify-center text-center my-40">
             <div>
-                <h2 className="text-3xl my-4">Oops!!!</h2>
+                <h2 className="text-3xl my-4 font-extrabold">Oops!!!</h2>
                 <p className="my-4">{error.statusText || error.message}</p>
                 {
                     error.status === 404 && <div>
                         <h3 className="my-3">Page not found</h3>
-                        <Link to="/"><button className="btn">Go Back</button></Link>
+                        <Link to="/"><button className="btn btn-primary">Go Back to Home</button></Link>
                     </div>
                 }
             </div>

@@ -5,13 +5,12 @@ import ReadAllBook from "../ReadAllBook/ReadAllBook";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 const ReadAllBooks = () => {
-    const [readBooks, setReadBooks] = useState([]);
+    
     const [displayBook, setDisplayBook] = useState([]);
 
     const handleBookFilter = (filter) => {
-        let sortedBooks = [...displayBook]; // Copying displayBook state
+        let sortedBooks = [...displayBook];
 
-        // Sort books based on the selected filter
         if (filter === "Rating") {
             sortedBooks.sort((a, b) => b.rating - a.rating);
         } else if (filter === "Number of pages") {
@@ -20,7 +19,7 @@ const ReadAllBooks = () => {
             sortedBooks.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
         }
 
-        setDisplayBook(sortedBooks); // Update displayBook state with sorted books
+        setDisplayBook(sortedBooks); 
     };
 
     const books = useLoaderData();
@@ -35,7 +34,7 @@ const ReadAllBooks = () => {
                     booksStore.push(book);
                 }
             }
-            setReadBooks(booksStore);
+           
             setDisplayBook(booksStore);
         }
     }, [books]);
@@ -60,9 +59,11 @@ const ReadAllBooks = () => {
                     </ul>
                 </details>
             </div>
-            {displayBook.map((book) => (
-                <ReadAllBook key={book.bookId} book={book} />
-            ))}
+
+            {
+                displayBook.map(book=> <ReadAllBook key={book.bookId} book={book}></ReadAllBook>)
+            }
+
         </div>
     );
 };
