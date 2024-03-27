@@ -1,4 +1,5 @@
-
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const getBooksInfoWish = () => {
     const storedBookInfo = localStorage.getItem('book-info-wish');
@@ -14,7 +15,12 @@ const saveBooksInfoWish = id => {
     if (!exist) {
         storedBook.push(id);
         localStorage.setItem('book-info-wish', JSON.stringify(storedBook));
+        toast.success('Book Added To wish List');
     }
+    else{
+        toast.error('Book already Added');
+    }
+   
 }
 
 

@@ -16,9 +16,9 @@ const WishAllBook = ({book}) => {
                     <h3 className="text-base font-semibold">By: {author}</h3>
                     <div className="flex items-center gap-5">
                         <p className="font-bold">Tags:</p>
-                        <p className="text-green-700 bg-green-50 font-semibold p-1 rounded-xl">{tags[0]}</p>
-                        <p className="text-green-700 bg-green-50 font-semibold p-1 rounded-xl">{tags[1]}</p>
-                        <p className="flex gap-2 items-center bg-green-50 rounded-xl p-1"><CiLocationOn /> Year Of Publishing: {yearOfPublishing}</p>
+                        <p className="text-green-700 px-2 py-1 bg-green-50 font-semibold p-1 rounded-xl">{tags[0]}</p>
+                        <p className="text-green-700 px-2 py-1 bg-green-50 font-semibold p-1 rounded-xl">{tags[1]}</p>
+                        <p className="flex gap-2 items-center bg-green-50 rounded-xl px-4 py-1"><CiLocationOn /> Year Of Publishing: {yearOfPublishing}</p>
                     </div>
                     <div className="flex gap-3">
                         <p className="flex gap-2 items-center"><FaUserGroup />Publisher: {publisher}</p>
@@ -26,8 +26,8 @@ const WishAllBook = ({book}) => {
                     </div>
                     <hr />
                     <div className="flex items-center gap-5">
-                        <p className="text-sky-800 bg-sky-100 font-semibold p-1 rounded-xl">Category: {category}</p>
-                        <p className="text-orange-800 bg-orange-100 font-semibold p-1 rounded-xl">Rating: {rating}</p>
+                        <p className="text-sky-800 bg-sky-100 font-semibold px-4 py-1 rounded-xl">Category: {category}</p>
+                        <p className="text-orange-800 bg-orange-100 font-semibold rounded-xl px-4 py-1">Rating: {rating}</p>
                         <Link to={`/book/${bookId}`}><button className="btn bg-green-500 text-white">View Details</button></Link>
                     </div>
                 </div>
